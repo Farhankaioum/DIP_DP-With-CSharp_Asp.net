@@ -86,7 +86,6 @@ namespace AutofacSamples
             builder.RegisterInstance(log).As<ILog>(); // if want to register a instance
 
             builder.Register((IComponentContext c) => new Engine(c.Resolve<ILog>())); // using lamda to register a type, if want to resovle type inside
-                                                                                      // new Object(c.Resolve<type>()) use (IComponentContext c) => new Obj()
 
             builder.RegisterGeneric(typeof(List<>)).As(typeof(IList<>)); // registering generic class/type
            
