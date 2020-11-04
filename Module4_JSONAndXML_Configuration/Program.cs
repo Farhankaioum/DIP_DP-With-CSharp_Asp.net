@@ -28,6 +28,17 @@ namespace Module4_JSONAndXML_Configuration
         }
     }
 
+    public class CalculationModule : Module
+    {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<Addition>().As<IOperation>();
+            builder.RegisterType<Multiplication>().As<IOperation>();
+
+            base.Load(builder);
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)

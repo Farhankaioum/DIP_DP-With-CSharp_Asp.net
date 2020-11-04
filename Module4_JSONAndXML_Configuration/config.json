@@ -1,5 +1,10 @@
 {
   "defaultAssembly": "Module4_JSONAndXML_Configuration",
+  "modules": [
+    {
+      "type": "Module4_JSONAndXML_Configuration.CalculationModule"
+    }
+  ], // loading configuration from class
   "components": [
     {
       "type": "Module4_JSONAndXML_Configuration.Addition",
