@@ -3,7 +3,32 @@
   "components": [
     {
       "type": "Module4_JSONAndXML_Configuration.Addition",
-      "services": [ { "type": "Module4_JSONAndXML_Configuration.IOperation" } ]
+      "services": [
+        { "type": "Module4_JSONAndXML_Configuration.IOperation" },
+        { "type": "Module4_JSONAndXML_Configuration.IOtherOperation" } // register another type
+      ],
+      "autoActivate": true,
+      "injectProperties": true,
+      "instanceScope": "per-dependency",
+      "metadata": [
+        {
+          "key": "extraValue",
+          "value": 123,
+          "type": "System.Int32, mscorlib"
+        }
+      ],
+      "ownership": "external",
+      "parameters": {
+        "precision": 5
+      },
+      "properties": {
+        "ValueDictionary": {
+          "one": 1,
+          "two": 2
+        },
+        "SomeList": [1,2,3,4]
+      }
+
     },
     {
       "type": "Module4_JSONAndXML_Configuration.Multiplication",
