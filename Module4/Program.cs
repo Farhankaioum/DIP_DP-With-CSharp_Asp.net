@@ -189,8 +189,8 @@ namespace AutofacSamples
 
             builder.RegisterType<MyClass>()
                 .AsSelf()
-                .As<IStartable>()
-                .SingleInstance(); // registration autofac IStartable interface
+                .As<IStartable>() // registration autofac IStartable interface for doing something special
+                .SingleInstance(); 
 
             using (var scope = builder.Build().BeginLifetimeScope())
             {
@@ -209,6 +209,11 @@ namespace AutofacSamples
 
     public class MyClass : IStartable
     {
+        public MyClass()
+        {
+            Console.WriteLine("My class ctor");
+        }
+
         public void Start()
         {
             Console.WriteLine("Container being built");
