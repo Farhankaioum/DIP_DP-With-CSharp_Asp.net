@@ -187,6 +187,11 @@ namespace AutofacSamples
             builder.Register<ILog>(c => c.Resolve<ConsoleLog>())
               .OnActivating(a => a.ReplaceInstance(new SMSLog("+123456"))); // sometimes ReplaceInstance gives a error, so use this apporch
 
+            builder.RegisterType<MyClass>()
+                .AsSelf()
+                .As<IStartable>()
+                .SingleInstance(); // registration autofac IStartable interface
+
             using (var scope = builder.Build().BeginLifetimeScope())
             {
                 var child = scope.Resolve<Child>();
@@ -196,7 +201,17 @@ namespace AutofacSamples
 
                 var log = scope.Resolve<ILog>();
                 log.Write("Testing");
+
+                scope.Resolve<MyClass>(); // resolve registration autofac IStartable interface
             }
+        }
+    }
+
+    public class MyClass : IStartable
+    {
+        public void Start()
+        {
+            Console.WriteLine("Container being built");
         }
     }
 }
