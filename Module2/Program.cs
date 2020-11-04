@@ -95,6 +95,20 @@ namespace AutofacSamples
         }
     }
 
+    public class Parent
+    {
+        public override string ToString()
+        {
+            return "I am your .....";
+        }
+    }
+
+    public class Child
+    {
+        public string Name { get; set; }
+        public Parent Parent { get; set; }
+    }
+
     internal class Program
     {
         public static void Main(string[] args)
@@ -117,21 +131,30 @@ namespace AutofacSamples
             //     .WithParameter(new ResolvedParameter(
             //         // predicate
             //         (pi, ctx) => pi.ParameterType == typeof(string) && pi.Name == "phoneNumber",
-            //         // value accessor
+            //          // value
             //         (pi, ctx) => "+12345678"
             //         ));
 
 
-            Random random = new Random();
+            //Random random = new Random();
+            //builder.Register((c, p) => new SMSLog(p.Named<string>("phoneNumber")))
+            //  .As<ILog>();
 
-            builder.Register((c, p) => new SMSLog(p.Named<string>("phoneNumber")))
-              .As<ILog>();
+            builder.RegisterType<Parent>();
+
+           // builder.RegisterType<Child>().PropertiesAutowired(); // if inject property type without constructor
+            builder.RegisterType<Child>()
+                .WithProperty("Parent", new Parent());
 
             Console.WriteLine("About to build container...");
             var container = builder.Build();
 
-            var log = container.Resolve<ILog>(new NamedParameter("phoneNumber", random.Next().ToString()));
-            log.Write("Testing");
+            var parent = container.Resolve<Child>().Parent;
+            Console.WriteLine(parent);
+
+
+            //var log = container.Resolve<ILog>(new NamedParameter("phoneNumber", random.Next().ToString()));
+            //log.Write("Testing");
         }
     }
 }
