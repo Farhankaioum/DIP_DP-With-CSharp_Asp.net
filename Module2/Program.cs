@@ -180,9 +180,6 @@ namespace AutofacSamples
             //    .As(t => t.GetInterfaces()[0])
             //    .AsSelf(); // if want registration type with those classes first interfaces
 
-            Console.WriteLine("About to build container...");
-            var container = builder.Build();
-
             //var ob = container.Resolve<SMSLog>(new NamedParameter("phoneNumber", ""));
             //Console.WriteLine(ob);
             //var parent = container.Resolve<Child>().Parent;
@@ -191,6 +188,24 @@ namespace AutofacSamples
 
             //var log = container.Resolve<ILog>(new NamedParameter("phoneNumber", random.Next().ToString()));
             //log.Write("Testing");
+
+            // registration module
+            builder.RegisterAssemblyModules(typeof(Program).Assembly); // all module
+            builder.RegisterAssemblyModules<ParentChildModule>(typeof(Program).Assembly); // specific module
+
+            Console.WriteLine("About to build container...");
+            var container = builder.Build();
+        }
+    }
+
+    public class ParentChildModule : Autofac.Module
+    {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<Parent>();
+            builder.Register(c => new Child() { Parent = c.Resolve<Parent>()});
+
+            base.Load(builder);
         }
     }
 }
