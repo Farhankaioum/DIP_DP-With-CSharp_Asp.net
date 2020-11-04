@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3.3", "Module4\Module
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module4", "Module4\Module4.csproj", "{B4FCA975-6F11-416E-B9F6-19D4B39FE9BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module4_JSONAndXML_Configuration", "Module4_JSONAndXML_Configuration\Module4_JSONAndXML_Configuration.csproj", "{BCF31069-089A-42F4-A113-57A54A648468}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B4FCA975-6F11-416E-B9F6-19D4B39FE9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4FCA975-6F11-416E-B9F6-19D4B39FE9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4FCA975-6F11-416E-B9F6-19D4B39FE9BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF31069-089A-42F4-A113-57A54A648468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF31069-089A-42F4-A113-57A54A648468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF31069-089A-42F4-A113-57A54A648468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF31069-089A-42F4-A113-57A54A648468}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

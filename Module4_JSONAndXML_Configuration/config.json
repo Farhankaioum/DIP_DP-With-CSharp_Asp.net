@@ -1,0 +1,14 @@
+{
+  "defaultAssembly": "Module4_JSONAndXML_Configuration",
+  "components": [
+    {
+      "type": "Module4_JSONAndXML_Configuration.Addition",
+      "services": [ { "type": "Module4_JSONAndXML_Configuration.IOperation" } ]
+    },
+    {
+      "type": "Module4_JSONAndXML_Configuration.Multiplication",
+      "services": [ { "type": "Module4_JSONAndXML_Configuration.IOperation" } ]
+    }
+
+  ]
+}
