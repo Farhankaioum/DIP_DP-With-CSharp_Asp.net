@@ -107,6 +107,11 @@ namespace AutofacSamples
     {
         public string Name { get; set; }
         public Parent Parent { get; set; }
+
+        public void SetParent(Parent parent)
+        {
+            Parent = parent;
+        }
     }
 
     internal class Program
@@ -142,9 +147,23 @@ namespace AutofacSamples
 
             builder.RegisterType<Parent>();
 
-           // builder.RegisterType<Child>().PropertiesAutowired(); // if inject property type without constructor
+            // builder.RegisterType<Child>().PropertiesAutowired(); // if inject property type without constructor
+            //builder.RegisterType<Child>()
+            //    .WithProperty("Parent", new Parent()); // if inject property type without constructor
+
+            // registration method
+            //builder.Register(c =>
+            //{
+            //    var child = new Child();
+            //    child.SetParent(c.Resolve<Parent>());
+            //    return child;
+            //});
             builder.RegisterType<Child>()
-                .WithProperty("Parent", new Parent());
+                .OnActivated(e  =>
+                {
+                    var p = e.Context.Resolve<Parent>();
+                    e.Instance.SetParent(p);
+                });
 
             Console.WriteLine("About to build container...");
             var container = builder.Build();
