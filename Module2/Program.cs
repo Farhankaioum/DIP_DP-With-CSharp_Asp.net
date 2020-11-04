@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using Autofac;
 using Autofac.Core;
 
@@ -145,7 +146,7 @@ namespace AutofacSamples
             //builder.Register((c, p) => new SMSLog(p.Named<string>("phoneNumber")))
             //  .As<ILog>();
 
-            builder.RegisterType<Parent>();
+            //builder.RegisterType<Parent>();
 
             // builder.RegisterType<Child>().PropertiesAutowired(); // if inject property type without constructor
             //builder.RegisterType<Child>()
@@ -158,18 +159,34 @@ namespace AutofacSamples
             //    child.SetParent(c.Resolve<Parent>());
             //    return child;
             //});
-            builder.RegisterType<Child>()
-                .OnActivated(e  =>
-                {
-                    var p = e.Context.Resolve<Parent>();
-                    e.Instance.SetParent(p);
-                });
+            //builder.RegisterType<Child>()
+            //    .OnActivated(e  =>
+            //    {
+            //        var p = e.Context.Resolve<Parent>();
+            //        e.Instance.SetParent(p);
+            //    });
+
+            // registration all types using reflection
+            var assembly = Assembly.GetExecutingAssembly();
+            //builder.RegisterAssemblyTypes(assembly)
+            //    .Where(t => t.Name.EndsWith("Log"))
+            //    .Except<SMSLog>()
+            //    .Except<ConsoleLog>(c => c.As<ILog>().SingleInstance())
+            //    .AsSelf();
+
+            //builder.RegisterAssemblyTypes(assembly)
+            //    .Except<SMSLog>()
+            //    .Where(t => t.Name.EndsWith("Log"))
+            //    .As(t => t.GetInterfaces()[0])
+            //    .AsSelf(); // if want registration type with those classes first interfaces
 
             Console.WriteLine("About to build container...");
             var container = builder.Build();
 
-            var parent = container.Resolve<Child>().Parent;
-            Console.WriteLine(parent);
+            //var ob = container.Resolve<SMSLog>(new NamedParameter("phoneNumber", ""));
+            //Console.WriteLine(ob);
+            //var parent = container.Resolve<Child>().Parent;
+            //Console.WriteLine(parent);
 
 
             //var log = container.Resolve<ILog>(new NamedParameter("phoneNumber", random.Next().ToString()));
