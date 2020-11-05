@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module5_DecoratorsPattern",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module5_CircularDependencies", "Module5_CircularDependencies\Module5_CircularDependencies.csproj", "{08878DC8-61FE-4E42-A9DC-7D85684361DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module5_AttributeBasedMetadata", "Module5_AttributeBasedMetadata\Module5_AttributeBasedMetadata.csproj", "{73C31946-96E7-44E3-B46E-5F72EE33D6B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{08878DC8-61FE-4E42-A9DC-7D85684361DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08878DC8-61FE-4E42-A9DC-7D85684361DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08878DC8-61FE-4E42-A9DC-7D85684361DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73C31946-96E7-44E3-B46E-5F72EE33D6B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73C31946-96E7-44E3-B46E-5F72EE33D6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73C31946-96E7-44E3-B46E-5F72EE33D6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73C31946-96E7-44E3-B46E-5F72EE33D6B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
