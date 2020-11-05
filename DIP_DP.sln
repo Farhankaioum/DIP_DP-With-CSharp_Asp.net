@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module5_CircularDependencie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module5_AttributeBasedMetadata", "Module5_AttributeBasedMetadata\Module5_AttributeBasedMetadata.csproj", "{73C31946-96E7-44E3-B46E-5F72EE33D6B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module5_AggregateService", "Module5_AggregateService\Module5_AggregateService.csproj", "{9C74809D-EA83-46EA-AC05-2354FB9015F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{73C31946-96E7-44E3-B46E-5F72EE33D6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73C31946-96E7-44E3-B46E-5F72EE33D6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73C31946-96E7-44E3-B46E-5F72EE33D6B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C74809D-EA83-46EA-AC05-2354FB9015F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C74809D-EA83-46EA-AC05-2354FB9015F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C74809D-EA83-46EA-AC05-2354FB9015F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C74809D-EA83-46EA-AC05-2354FB9015F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
