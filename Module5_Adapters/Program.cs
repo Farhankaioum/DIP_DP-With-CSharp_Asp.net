@@ -84,10 +84,10 @@ namespace Module5_Adapters
             builder.RegisterType<OpenCommand>().As<ICommand>()
                 .WithMetadata("Name", "Open");
             //builder.RegisterType<Button>(); // registration traditionally way
-            // builder.RegisterAdapter<ICommand, Button>(cmd => new Button(cmd)); // registration type with adapter
+            // builder.RegisterAdapter<ICommand, Button>(cmd => new Button(cmd)); // registration type with adapter pattern
             builder.RegisterAdapter<Meta<ICommand>, Button>(cmd =>
                 new Button(cmd.Value, (string)cmd.Metadata["Name"]) 
-            ); // registration type with adapter with metadata
+            ); // registration type with adapter pattern using metadata
             builder.RegisterType<Editor>();
 
             using (var c = builder.Build())
