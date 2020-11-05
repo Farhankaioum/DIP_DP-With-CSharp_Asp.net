@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module5_AttributeBasedMetad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module5_AggregateService", "Module5_AggregateService\Module5_AggregateService.csproj", "{9C74809D-EA83-46EA-AC05-2354FB9015F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module5_TypeInterceptors", "Module5_TypeInterceptors\Module5_TypeInterceptors.csproj", "{C289F414-E0A7-4B39-8DC2-1E9072E020B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{9C74809D-EA83-46EA-AC05-2354FB9015F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C74809D-EA83-46EA-AC05-2354FB9015F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C74809D-EA83-46EA-AC05-2354FB9015F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C289F414-E0A7-4B39-8DC2-1E9072E020B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C289F414-E0A7-4B39-8DC2-1E9072E020B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C289F414-E0A7-4B39-8DC2-1E9072E020B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C289F414-E0A7-4B39-8DC2-1E9072E020B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
