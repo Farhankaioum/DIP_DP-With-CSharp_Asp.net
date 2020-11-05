@@ -5,19 +5,21 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module1", "Module1\Module1.csproj", "{BF93D726-D49C-46CA-9EE6-DD7A961BEA68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module2", "Module2\Module2.csproj", "{3D7EA3B0-2961-4F3A-A4EE-B4FD97889332}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module2", "Module2\Module2.csproj", "{3D7EA3B0-2961-4F3A-A4EE-B4FD97889332}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3", "Module3\Module3.csproj", "{4DB2658B-286C-4432-9B5B-6454074C323F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module3", "Module3\Module3.csproj", "{4DB2658B-286C-4432-9B5B-6454074C323F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3.1", "Module3.1\Module3.1.csproj", "{0C9AD841-1480-45CC-AACA-BDAF05E138F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module3.1", "Module3.1\Module3.1.csproj", "{0C9AD841-1480-45CC-AACA-BDAF05E138F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3.2", "Module3.2\Module3.2.csproj", "{3E92E306-C769-49B6-991B-9ED6CEEB4BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module3.2", "Module3.2\Module3.2.csproj", "{3E92E306-C769-49B6-991B-9ED6CEEB4BBE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3.3", "Module4\Module3.3.csproj", "{3F98DCCD-C45C-4B6A-A375-78D94BCEF562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module4", "Module4\Module4.csproj", "{B4FCA975-6F11-416E-B9F6-19D4B39FE9BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module4", "Module4\Module4.csproj", "{B4FCA975-6F11-416E-B9F6-19D4B39FE9BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module4_JSONAndXML_Configuration", "Module4_JSONAndXML_Configuration\Module4_JSONAndXML_Configuration.csproj", "{BCF31069-089A-42F4-A113-57A54A648468}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module4_JSONAndXML_Configuration", "Module4_JSONAndXML_Configuration\Module4_JSONAndXML_Configuration.csproj", "{BCF31069-089A-42F4-A113-57A54A648468}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module5_RegistrationSources", "Module5_RegistrationSources\Module5_RegistrationSources.csproj", "{8CF8234A-5EEB-44C6-9DFA-0253B9ACBB39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{BCF31069-089A-42F4-A113-57A54A648468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCF31069-089A-42F4-A113-57A54A648468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCF31069-089A-42F4-A113-57A54A648468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF8234A-5EEB-44C6-9DFA-0253B9ACBB39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF8234A-5EEB-44C6-9DFA-0253B9ACBB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF8234A-5EEB-44C6-9DFA-0253B9ACBB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF8234A-5EEB-44C6-9DFA-0253B9ACBB39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
