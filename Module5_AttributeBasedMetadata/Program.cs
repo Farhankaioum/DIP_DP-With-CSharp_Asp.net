@@ -62,6 +62,7 @@ namespace Module5_AttributeBasedMetadata
             builder.RegisterModule<AttributedMetadataModule>(); // registering autofac AttributedMetadataModule for working Attribute
             builder.RegisterType<CenturyArtwork>().As<IArtWork>();
             builder.RegisterType<MillenialArtwork>().As<IArtWork>();
+            builder.RegisterType<ArtDisplay>();
             using (var container = builder.Build())
             {
                var artDisplay = container.Resolve<ArtDisplay>();
